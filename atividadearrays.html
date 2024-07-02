@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inverter Sequência de Caracteres</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  input[type=text] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <h2>Inverter Sequência de Caracteres</h2>
+  <input type="text" id="texto" placeholder="Digite uma sequência de caracteres">
+  <br>
+  <button onclick="inverterString()">Inverter</button>
+  <br>
+  <div id="resultado"></div>
+
+  <script>
+    function inverterString() {
+      let input = document.getElementById("texto").value;
+
+      let resultado = input.split('').reverse().join('');
+
+      document.getElementById("resultado").textContent = "Resultado invertido: " + resultado;
+    }
+  </script>
+</body>
+</html>
